@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import WebViewer from '@pdftron/webviewer'
+import WebViewer, { Tools } from '@pdftron/webviewer'
 import './App.css'
 
 function App() {
@@ -22,7 +22,8 @@ function App() {
       //  'viewControlsButton'
       //],
     }, viewerDiv.current as HTMLDivElement).then(instance => {
-
+      instance.disableTools(['AnnotationEdit'])
+      instance.setToolMode('Pan')
     })
   }, [])
 
