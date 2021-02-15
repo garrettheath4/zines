@@ -11,7 +11,7 @@ function App() {
     // Tutorial: https://www.youtube.com/watch?v=bVhWXuLSL0k  */
     WebViewer({
       path: 'lib',
-      initialDoc: 'pdfs/QAW_Download_Library_Jan26_2021/90-newsletter.pdf',
+      initialDoc: 'pdfs/QAW_Download_Library_Jan26_2021/gayliberator.pdf',
       accessibleMode: true,
       enableAnnotations: false,
       enableMeasurement: false,
