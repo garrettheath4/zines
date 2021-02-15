@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import WebViewer, { WebViewerInstance } from '@pdftron/webviewer'
 import pdfs from './pdfs'
-import './App.css'
 
 function PdfTron() {
   const viewerDiv = useRef<HTMLDivElement>(null)
@@ -26,7 +25,7 @@ function PdfTron() {
   }, [])
 
   return (
-    <div className='webviewer' ref={viewerDiv} />
+    <div ref={viewerDiv} style={{ height: '100vh' }} />
   )
 }
 

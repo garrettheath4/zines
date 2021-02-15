@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react'
-import './App.css'
+import React  from 'react'
 import PdfTron from './PdfTron'
 
 function App() {
