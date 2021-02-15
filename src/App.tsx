@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
-import WebViewer, { Tools } from '@pdftron/webviewer'
+import WebViewer, { WebViewerInstance } from '@pdftron/webviewer'
+import pdfs from './pdfs'
 import './App.css'
 
 function App() {
@@ -11,19 +12,16 @@ function App() {
     // Tutorial: https://www.youtube.com/watch?v=bVhWXuLSL0k  */
     WebViewer({
       path: 'lib',
-      initialDoc: 'pdfs/QAW_Download_Library_Jan26_2021/gayliberator.pdf',
+      initialDoc: `pdfs/${pdfs[0].filePath}`,
       accessibleMode: true,
       enableAnnotations: false,
       enableMeasurement: false,
       enableRedaction: false,
       isAdminUser: false,
       isReadOnly: true,
-      //disabledElements: [
-      //  'viewControlsButton'
-      //],
-    }, viewerDiv.current as HTMLDivElement).then(instance => {
-      instance.disableTools(['AnnotationEdit'])
+    }, viewerDiv.current as HTMLDivElement).then((instance: WebViewerInstance) => {
       instance.setToolMode('Pan')
+      instance.disableTools(['AnnotationEdit'])
     })
   }, [])
 
