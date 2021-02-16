@@ -1,6 +1,6 @@
 {
   "name": "zines",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Displays random zines (DIY magazines) from queer archives sources in fullscreen for viewing and turning the pages with a touchscreen.",
   "homepage": "http://zines.garrettheath4.com/",
   "repository": "https://github.com/garrettheath4/zines.git",

@@ -32,6 +32,11 @@ const pdfs: PdfMetadata[] = [
     },
   },
   {
+    filePath: 'QAW_Download_Library_Jan26_2021/whiteness.pdf',
+    sourceUrl: 'https://queer.archive.work/library/download/index.html',
+    categories: ['Race & Ethnicity/white'],
+  },
+  {
     filePath: 'QAW_Download_Library_Jan26_2021/500years.pdf',
     sourceUrl: 'https://queer.archive.work/library/download/index.html',
     categories: ['Race & Ethnicity/Indigenous'],
@@ -206,11 +211,6 @@ const pdfs: PdfMetadata[] = [
     filePath: 'QAW_Download_Library_Jan26_2021/warrior.pdf',
     sourceUrl: 'https://queer.archive.work/library/download/index.html',
     categories: ['Race & Ethnicity/Indigenous'],
-  },
-  {
-    filePath: 'QAW_Download_Library_Jan26_2021/whiteness.pdf',
-    sourceUrl: 'https://queer.archive.work/library/download/index.html',
-    categories: ['Race & Ethnicity/white'],
   },
   {
     filePath: 'QAW_Download_Library_Jan26_2021/whitepeoplehateprotests.pdf',
