@@ -1,4 +1,6 @@
 steps:
+  - name: 'gcr.io/public-side-projects/git-lfs'
+    args: ['clone', 'https://github.com/garrettheath4/zines.git']
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
   - name: 'gcr.io/cloud-builders/npm'
