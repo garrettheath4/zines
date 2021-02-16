@@ -11,7 +11,7 @@ function PdfTron() {
     // Tutorial: https://www.youtube.com/watch?v=bVhWXuLSL0k  */
     WebViewer({
       path: 'lib',
-      initialDoc: `pdfs/${pdfs[0].filePath}`,
+      initialDoc: `pdfs/${pdfs[1].filePath}`,
       accessibleMode: true,
       enableAnnotations: false,
       enableMeasurement: false,
