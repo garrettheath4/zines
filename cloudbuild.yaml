@@ -11,6 +11,13 @@ steps:
     args: ['pull']
     dir: '/workspace'
   - name: 'gcr.io/public-side-projects/git-lfs'
+    entrypoint: /bin/rm
+    args: ['-r', 'public/']
+    dir: '/workspace'
+  - name: 'gcr.io/public-side-projects/git-lfs'
+    args: ['checkout', '.']
+    dir: '/workspace'
+  - name: 'gcr.io/public-side-projects/git-lfs'
     entrypoint: /bin/bash
     args:
       - -c
