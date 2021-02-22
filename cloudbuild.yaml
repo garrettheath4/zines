@@ -10,6 +10,13 @@ steps:
   - name: 'gcr.io/public-side-projects/git-lfs'
     args: ['pull']
     dir: '/workspace'
+  - name: 'gcr.io/public-side-projects/git-lfs'
+    entrypoint: /bin/bash
+    args:
+      - -c
+      - |
+        (( $(stat -c%s public/pdfs/QAW_Download_Library_Jan26_2021/whiteness.pdf) > 5000000 ))
+    dir: '/workspace'
 # Deploy to the Google Cloud Storage bucket that serves the web app at https://zines.garrettheath4.com
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ["-m", "rsync", "-r", "-c", "-d", "./build", "gs://zines.garrettheath4.com"]
