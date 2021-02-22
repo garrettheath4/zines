@@ -1,10 +1,15 @@
 steps:
-  - name: 'gcr.io/public-side-projects/git-lfs'
-    args: ['clone', 'https://github.com/garrettheath4/zines.git']
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['run' , 'build']
+    entrypoint: bash
+    args: ['pwd']
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['install']
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['run' , 'build']
 # Deploy to the Google Cloud Storage bucket that serves the web app at https://zines.garrettheath4.com
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ["-m", "rsync", "-r", "-c", "-d", "./build", "gs://zines.garrettheath4.com"]
+# - name: 'gcr.io/cloud-builders/gsutil'
+#   args: ["-m", "rsync", "-r", "-c", "-d", "./build", "gs://zines.garrettheath4.com"]
+# Google Cloud doesn't natively support Git LFS, so we have to manually check out the repo again with Git LFS enabled
+# - name: 'gcr.io/public-side-projects/git-lfs'
+#   args: ['clone', 'https://github.com/garrettheath4/zines.git']
+#   dir: '/workspace'
