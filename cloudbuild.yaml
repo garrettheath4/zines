@@ -12,7 +12,7 @@ steps:
     dir: '/workspace'
   - name: 'gcr.io/public-side-projects/git-lfs'
     entrypoint: /bin/rm
-    args: ['-r', 'public/']
+    args: ['-r', 'public/pdfs/']
     dir: '/workspace'
   - name: 'gcr.io/public-side-projects/git-lfs'
     args: ['checkout', '.']
@@ -22,6 +22,7 @@ steps:
     args:
       - -c
       - |
+        ls -lh public/pdfs/QAW_Download_Library_Jan26_2021/
         (( $(stat -c%s public/pdfs/QAW_Download_Library_Jan26_2021/whiteness.pdf) > 5000000 ))
     dir: '/workspace'
 # Deploy to the Google Cloud Storage bucket that serves the web app at https://zines.garrettheath4.com
